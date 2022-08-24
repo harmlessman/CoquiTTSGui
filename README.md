@@ -7,11 +7,13 @@ These source files are gui for users who use the coqui-TTS vits model.
 * It is designed to make it easy to use the model obtained by performing voice synthesis with Vits.
 * Model files (.pth), speakers (.pth), language_ids (.json) are required.
 * Just copy the `UI.py` file and the `design.ui` file to the location where `setup.py` is located.
-* When you run the UI.py file, the gui runs.
+* When you run the `UI.py` file, the gui runs.
 
 ## Prerequisites
 * pyqt5
-```pip install pyqt5```
+```
+pip install pyqt5
+```
 
 # How To Use
 ![image](https://user-images.githubusercontent.com/87223285/186101795-75a3194f-5e2e-46a4-b61d-e64bdc50dfea.png)
@@ -22,5 +24,9 @@ These source files are gui for users who use the coqui-TTS vits model.
 5. If necessary, check the running voice box at the top left. If checked, play the voice as soon as the synthesis is complete.
 6. Press the systhesis button
 
+# Note
+* Total time is Total time is the time taken from the time the synthesis button is clicked to the time the wav file is generated.
+* Audio time is the length of the generated audio.
+* The output file is located in the same location as the model.
 
 
