@@ -4,9 +4,7 @@ import json
 from PyQt5 import uic
 from PyQt5.QtWidgets import *
 from PyQt5.QtCore import *
-from pydub import AudioSegment
-from pydub.playback import play
-import winsound
+import playsound
 import wave
 import time
 
@@ -55,13 +53,10 @@ class Worker(QThread):
         )
 
         if self.parent.voice_output.isChecked():
-            #os.path.join(self.parent.path, self.parent.outfile_name)
-            #song = AudioSegment.from_wav(os.path.join(self.parent.path, self.parent.outfile_name))
-            #play(song)
-            winsound.PlaySound(
-                f'{("/").join(self.parent.path.split("/")[:-1]) + "/" + self.parent.outfile_name}',
-                winsound.SND_FILENAME,
+            playsound.playsound(
+                os.path.join(self.parent.path, self.parent.outfile_name), block=True
             )
+
         else:
             pass
 
@@ -89,7 +84,7 @@ class MyWindow(QMainWindow, form_class):
         if self.outfiletext.text():
             self.outfile_name = self.outfiletext.text()
         else:
-            self.outfile_name = 'output'
+            self.outfile_name = "output"
         if self.outfile_name.split(".")[-1] != "wav":
             self.outfile_name = self.outfile_name + ".wav"
         self.speaker = self.speaker_box.currentText()
