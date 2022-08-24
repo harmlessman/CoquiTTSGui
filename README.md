@@ -6,6 +6,7 @@ These source files are gui for users who use the coqui-TTS vits model.
 ## This Project
 * It is designed to make it easy to use the model obtained by performing voice synthesis with Vits.
 * Model files (.pth), speakers (.pth), language_ids (.json) are required.
+* Model files, speakers, language_ids must be in the same location.
 * Just copy the `UI.py` file and the `design.ui` file to the location where `setup.py` is located.
 * When you run the `UI.py` file, the gui runs.
 
