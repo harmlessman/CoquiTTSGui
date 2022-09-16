@@ -34,3 +34,5 @@ pip install playsound==1.2.2
 * The output file is located in the same location as the model.
 * The filename of speakers file, language_ids file, config file follows the default value. If you want to change the file name above, please modify the values of config_name, lang_id_name, and speak_id_name in the code.
 
+# Soon!
+Ability to preload models to reduce the amount of time before voice is output
